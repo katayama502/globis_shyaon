@@ -676,3 +676,66 @@ ul {
     color: var(--text-secondary);
     line-height: 1.6;
 }
+
+/* Notes Section */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.notes-block {
+    background: rgba(30, 41, 59, 0.2);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.notes-block h4 {
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-left: 3px solid var(--accent);
+    padding-left: 15px;
+}
+
+.notes-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.notes-block li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.notes-block li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.management-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background: rgba(44, 65, 102, 0.4);
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
